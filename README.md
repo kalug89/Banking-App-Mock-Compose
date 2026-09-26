@@ -1,6 +1,54 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/alexandr7035/Banking-App-Mock-Compose?color=%237f52ff&style=for-the-badge)
 
 
+
+<h2>Project Goal</h2>
+
+<p>
+  I am developing this project as a QA portfolio focused on designing and
+  automating Android tests, investigating bugs, and integrating tests into CI.
+  I document my contributions, technical decisions, and the limitations
+  of the solution.
+</p>
+
+<h2>Roadmap</h2>
+
+<ul>
+  <li>
+    <strong>M0 — Working Project Baseline:</strong>
+    run the app, check existing tests and core user flows, and document
+    setup instructions.
+  </li>
+  <li>
+    <strong>M1 — Test Strategy:</strong>
+    analyze risks and define requirements and test cases for money transfers.
+  </li>
+  <li>
+    <strong>M2 — Logic Tests:</strong>
+    prepare reproducible test data, isolate tests, and cover transfer
+    validation and ViewModels.
+  </li>
+  <li>
+    <strong>M3 — UI Automation:</strong>
+    add Compose UI tests covering transfers, balances, transaction history,
+    and error scenarios.
+  </li>
+  <li>
+    <strong>M4 — CI and MVP:</strong>
+    automate builds, lint checks, tests, and reports with GitHub Actions.
+  </li>
+  <li>
+    <strong>M5 — HTTP Layer:</strong>
+    introduce HTTP communication for a selected flow and test controlled
+    responses and failures.
+  </li>
+  <li>
+    <strong>M6 — Resilience and Presentation:</strong>
+    verify accessibility and lifecycle behavior, document decisions,
+    and prepare a project demo.
+  </li>
+</ul>
+
 <br>
 <p align="center"> 
    <img height="150" src="https://github.com/alexandr7035/Banking-App-Mock-Compose/assets/22574399/eb81869d-818c-4039-8861-6513b0b62dbb"/> 
