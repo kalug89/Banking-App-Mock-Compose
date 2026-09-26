@@ -17,3 +17,6 @@ keystore.properties
 .externalNativeBuild
 .cxx
 local.properties
+
+# Java heap dumps
+*.hprof
