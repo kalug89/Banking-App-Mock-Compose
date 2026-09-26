@@ -11,6 +11,39 @@
   of the solution.
 </p>
 
+<h3>Running the Project</h3>
+
+<p>
+  Open the project in Android Studio, install Android SDK 35, and sync Gradle.
+  Then run the <code>app</code> configuration using the <code>debug</code> build variant.
+</p>
+
+<p>
+  Successfully launched on the <strong>Pixel 6 emulator running Android 15 / API 35</strong>.
+</p>
+
+<p>
+  <strong>Demo credentials:</strong>
+  login <code>example@mail.com</code>,
+  password <code>1234567Ab</code>,
+  OTP <code>1111</code>.
+</p>
+
+<h3>Tests</h3>
+
+<pre><code class="language-bash">./gradlew testDebugUnitTest
+./gradlew connectedDebugAndroidTest</code></pre>
+
+<p>
+  The second command requires a running emulator or a connected Android device.
+</p>
+
+<p>
+  The project contains two template tests, with no automated user-flow tests.
+  Running the existing tests and manually verifying login, money transfers,
+  and transaction history remain planned tasks for M3.
+</p>
+
 <h2>Roadmap</h2>
 
 <ul>
@@ -48,6 +81,18 @@
     and prepare a project demo.
   </li>
 </ul>
+
+<h3>My Contributions — M0</h3>
+
+<ul>
+  <li>Enabled local builds without the original author's signing configuration.</li>
+  <li>Enabled AndroidX and added <code>gradle.properties</code> to version control.</li>
+  <li>Added <code>*.hprof</code> heap dumps to <code>.gitignore</code>.</li>
+</ul>
+
+ 
+
+
 
 <br>
 <p align="center"> 
