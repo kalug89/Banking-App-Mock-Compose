@@ -1,7 +1,6 @@
 .idea/
 app/release
 keystore.properties
-gradle.properties
 
 *.iml
 .gradle
@@ -18,3 +17,6 @@ gradle.properties
 .externalNativeBuild
 .cxx
 local.properties
+
+# Java heap dumps
+*.hprof

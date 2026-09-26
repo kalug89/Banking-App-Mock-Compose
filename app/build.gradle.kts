@@ -1,5 +1,6 @@
 import java.io.FileInputStream
 import java.util.Properties
+val keystoreProperties = Properties()
 
 plugins {
     with(libs.plugins) {
@@ -11,8 +12,11 @@ plugins {
 }
 
 val keystorePropertiesFile = rootProject.file("keystore.properties")
-val keystoreProperties = Properties().apply {
-    load(FileInputStream(keystorePropertiesFile))
+
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.inputStream().use {
+        keystoreProperties.load(it)
+    }
 }
 
 android {
@@ -20,11 +24,13 @@ android {
     compileSdk = 35
 
     signingConfigs {
-        create("config") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
+        if (keystorePropertiesFile.exists()) {
+            create("config") {
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+            }
         }
     }
 
@@ -41,7 +47,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs.getByName("config")
+            signingConfig = signingConfigs.findByName("config")
             isMinifyEnabled = true
             proguardFiles(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -49,7 +55,6 @@ android {
             )
         }
         getByName("debug") {
-            signingConfig = signingConfigs.getByName("config")
             applicationIdSuffix = ".debug"
             isDebuggable = true
             versionNameSuffix = ".debug"

@@ -1,6 +1,99 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/alexandr7035/Banking-App-Mock-Compose?color=%237f52ff&style=for-the-badge)
 
 
+
+<h2>Project Goal</h2>
+
+<p>
+  I am developing this project as a QA portfolio focused on designing and
+  automating Android tests, investigating bugs, and integrating tests into CI.
+  I document my contributions, technical decisions, and the limitations
+  of the solution.
+</p>
+
+<h3>Running the Project</h3>
+
+<p>
+  Open the project in Android Studio, install Android SDK 35, and sync Gradle.
+  Then run the <code>app</code> configuration using the <code>debug</code> build variant.
+</p>
+
+<p>
+  Successfully launched on the <strong>Pixel 6 emulator running Android 15 / API 35</strong>.
+</p>
+
+<p>
+  <strong>Demo credentials:</strong>
+  login <code>example@mail.com</code>,
+  password <code>1234567Ab</code>,
+  OTP <code>1111</code>.
+</p>
+
+<h3>Tests</h3>
+
+<pre><code class="language-bash">./gradlew testDebugUnitTest
+./gradlew connectedDebugAndroidTest</code></pre>
+
+<p>
+  The second command requires a running emulator or a connected Android device.
+</p>
+
+<p>
+  The project contains two template tests, with no automated user-flow tests.
+  Running the existing tests and manually verifying login, money transfers,
+  and transaction history remain planned tasks for M3.
+</p>
+
+<h2>Roadmap</h2>
+
+<ul>
+  <li>
+    <strong>M0 — Working Project Baseline:</strong>
+    run the app, check existing tests and core user flows, and document
+    setup instructions.
+  </li>
+  <li>
+    <strong>M1 — Test Strategy:</strong>
+    analyze risks and define requirements and test cases for money transfers.
+  </li>
+  <li>
+    <strong>M2 — Logic Tests:</strong>
+    prepare reproducible test data, isolate tests, and cover transfer
+    validation and ViewModels.
+  </li>
+  <li>
+    <strong>M3 — UI Automation:</strong>
+    add Compose UI tests covering transfers, balances, transaction history,
+    and error scenarios.
+  </li>
+  <li>
+    <strong>M4 — CI and MVP:</strong>
+    automate builds, lint checks, tests, and reports with GitHub Actions.
+  </li>
+  <li>
+    <strong>M5 — HTTP Layer:</strong>
+    introduce HTTP communication for a selected flow and test controlled
+    responses and failures.
+  </li>
+  <li>
+    <strong>M6 — Resilience and Presentation:</strong>
+    verify accessibility and lifecycle behavior, document decisions,
+    and prepare a project demo.
+  </li>
+</ul>
+
+<h3>My Contributions — M0</h3>
+
+<ul>
+  <li>Enabled local builds without the original author's signing configuration.</li>
+  <li>Enabled AndroidX and added <code>gradle.properties</code> to version control.</li>
+  <li>Added <code>*.hprof</code> heap dumps to <code>.gitignore</code>.</li>
+</ul>
+
+ 
+
+
+
 <br>
 <p align="center"> 
    <img height="150" src="https://github.com/alexandr7035/Banking-App-Mock-Compose/assets/22574399/eb81869d-818c-4039-8861-6513b0b62dbb"/> 
