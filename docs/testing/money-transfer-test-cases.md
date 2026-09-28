@@ -22,7 +22,7 @@ Each case requires its preconditions to be established independently.
 Recipients are predefined demo contacts. No unrelated transactions should
 occur during execution.
 
-Execution results are recorded separately in `test-runs/`.
+Future execution results will be recorded separately in `test-runs/`.
 
 ## Test Cases
 
